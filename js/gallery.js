@@ -73,6 +73,9 @@ var mJson;
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = 'https://api.npoint.io/2e8dc462c70cd5f10ca2';
+if (mUrl == undefined) {
+  mUrl = 'https://api.npoint.io/604b0462b01a39f0ab8f'
+}
 
 function fetchJSON() {
 	mRequest.onreadystatechange = function() {
@@ -172,4 +175,6 @@ function GalleryImage() {
     var date = '';
     var source = '';
 }
+
+
 
