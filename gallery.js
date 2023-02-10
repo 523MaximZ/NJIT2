@@ -53,6 +53,9 @@ document.getElementById('photo').src = mImages[mCurrentIndex].img
 	mLastFrameTime = 0
 	mCurrentIndex += 1
 
+
+	
+
 }
 
 // Counter for the mImages array
@@ -98,53 +101,75 @@ function iterateJSON(mJson) {
  
 
 
-
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
+
 function makeGalleryImageOnloadCallback(galleryImage) {
-	return function(e) {
-		galleryImage.img = e.target;
-		mImages.push(galleryImage);
-	}
+    return function(e) {
+        galleryImage.img = e.target;
+        mImages.push(galleryImage);
+    }
 }
 
 $(document).ready( function() {
+    fetchJSON();
+$( ".moreIndicator" ).click(function() {
 
-    fetchJSON()
-    document.querySelector('.moreIndicator').addEventListener('click', function() {
-  if (this.classList.contains('rot90')) {
-    this.classList.remove('rot90');
-    this.classList.add('rot270');
-  } else {
-    this.classList.remove('rot270');
-    this.classList.add('rot90');
-  }
-});
 
-  $("#nextPhoto").on('click', () => {
-    swapPhoto();
-  })
+    if ($(this).hasClass("rot90")) {
+        $(this).removeClass("rot90");
+        $(this).addClass("rot270");
+        $( ".details" ).slideToggle( "slow" );
 
-  $("#prevPhoto").on('click', () => {
-    mCurrentIndex -= 2;
-    swapPhoto();
+      } else {
+        $(this).removeClass("rot270");
+        $(this).addClass("rot90");
+        $( ".details" ).slideToggle( "slow" );
 
-  })
-
-});
-
+      }
+    });
+  });
 
 window.addEventListener('load', function() {
-	
-	console.log('window loaded');
-
+    
+console.log('window loaded');
+$("#imageID").show();
 }, false);
 
 function GalleryImage() {
-	var location = '';
-	var description = '';
-	var date = '';
-	var source = '';
+var location;
+var description;
+var data;
+var img;
 }
 
+$(document).ready(function() {
+    $("#nextPhoto").click(function() {
+        swapPhoto();
+    });
+  });
+
+  $(document).ready(function() {
+    $("#prevPhoto").click(function() {
+
+if(mCurrentIndex  >= mImages.length) {
+
+mCurrentIndex = 0;
+}
+
+if(mCurrentIndex  < 0) {
+mCurrentIndex = mImages.length-1;
+}
+
+mLastFrameTime =0;
+mCurrentIndex -=1;
+    });
+  });
+
+function GalleryImage() {
+    var location = '';
+    var description = '';
+    var date = '';
+    var source = '';
+}
 
