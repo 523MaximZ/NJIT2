@@ -1,0 +1,34 @@
+{
+    "images": [
+        {
+            "imgPath": "https://media.architecturaldigest.com/photos/60c0bbdc20b2a05c5e095928/16:9/w_4272,h_2403,c_limit/rosewood%20mexico.jpeg",
+            "imgLocation": "Mexico",
+            "description": "Resort in Mexico",
+            "date": "11/02/2020"
+        },
+        {
+            "imgPath": "https://www.planetware.com/wpimages/2019/08/dominican-republic-punta-cana-top-family-resorts-majestic-colonial-punta-cana.jpg",
+            "imgLocation": "Dominican republic",
+            "description": "Resort in the DR",
+            "date": "24/04/2016"
+        },
+        {
+            "imgPath": "https://images.trvl-media.com/hotels/10000000/9030000/9022300/9022224/9d4196d6_y.jpg",
+            "imgLocation": "Jamaica",
+            "description": "Resort in Jamaica",
+            "date": "01/03/2015"
+        },
+        {
+            "imgPath": "https://www.expedia.com/stories/wp-content/uploads/2021/09/CocoCay-Daredevil-Tower.jpg",
+            "imgLocation": "Bahamas",
+            "description": "Coco Cay",
+            "date": "09/12/2017"
+        },
+        {
+            "imgPath": "http://travelthruhistory.com/wp-content/uploads/2020/02/Kennedy_Space_Center_Visitor_Complex.jpg",
+            "imgLocation": "Florida",
+            "description": "Nasa",
+            "date": "09/14/2017"
+        }
+  ]
+}
